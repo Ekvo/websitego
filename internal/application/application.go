@@ -2,7 +2,7 @@ package application
 
 import (
 	"context"
-	"github.com/alextonkonogov/atonko-authorization/internal/repository"
+	"github.com/Ekvo/websitego/internal/repository"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/julienschmidt/httprouter"
 	"html/template"

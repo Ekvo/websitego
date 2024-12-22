@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/alextonkonogov/atonko-authorization/internal/application"
-	"github.com/alextonkonogov/atonko-authorization/internal/repository"
+	"github.com/Ekvo/websitego/internal/application"
+	"github.com/Ekvo/websitego/internal/repository"
 	"github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
@@ -20,7 +20,7 @@ func main() {
 	a := application.NewApp(ctx, dbpool)
 	r := httprouter.New()
 	a.Routes(r)
-	srv := &http.Server{Addr: "0.0.0.0:8080", Handler: r}
-	fmt.Println("It is alive! Try http://localhost:8080")
+	srv := &http.Server{Addr: "127.0.0.1:8000", Handler: r}
+	fmt.Println("It is alive! Try http://localhost:8000")
 	srv.ListenAndServe()
 }
