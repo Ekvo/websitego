@@ -5,12 +5,14 @@ import (
 	"fmt"
 	"github.com/Ekvo/websitego/internal/application"
 	"github.com/Ekvo/websitego/internal/repository"
+	"github.com/Ekvo/websitego/internal/rrr"
 	"github.com/julienschmidt/httprouter"
 	"log"
 	"net/http"
 )
 
 func main() {
+	fmt.Printf(rrr.Rrr)
 	ctx := context.Background()
 	dbpool, err := repository.InitDBConn(ctx)
 	if err != nil {
